@@ -1,7 +1,9 @@
 Introduction
 ============
 
-This set of labs we will demonstrate how to take an existing Ionic/Cordova application and add the MobileFirst Platform v8.0 Cordova Plugin as well as demonstrate some of the capabilities provided by MobileFirst. The lab will cover bootstrapping, application customization, using MFP 8.0 adapters, MFP 8.0 Operational Analytics, custom report and more.
+> **IMPORTANT:** This series of labs assumes you are using a **Mac** with the **macOS operating system**. If you are using Windows or Linux you will need to ensure that you have also installed and properly configured the Anddroid Studio.
+
+This set of labs we will demonstrate how to take an existing Ionic/Cordova application and add the MobileFirst Platform v8.0 Cordova Plugin as well as demonstrate some of the capabilities provided by MobileFirst. The lab will cover bootstrapping, application customization, using MFF 8.0 adapters, MFF 8.0 Operational Analytics, custom report and more.
 
 The activity will start with an Ionic project that has already been created (see git repo below). The application is an Employee Directory application, named IBMEmployeeApp
 
@@ -9,17 +11,17 @@ The following exercise includes 11 micro labs (\~20 min each)
 
 -   Lab \# 1 - Understand the Ionic application and learn how to customize it
 
--   Lab \# 2 - Use Cordova CLI to add the new MFP v8.0 Cordova Plugin
+-   Lab \# 2 - Use Cordova CLI to add the new MFF v8.0 Cordova Plugin
 
--   Lab \# 3 - Load MFP framework and application Bootstrapping
+-   Lab \# 3 - Load MFF framework and application Bootstrapping
 
--   Lab \# 4 - Use MFP CLI to register and manage your application
+-   Lab \# 4 - Use MFF CLI to register and manage your application
 
--   Lab \# 5 - Using MFP adapters frameworks (Server Side)
+-   Lab \# 5 - Using MFF adapters frameworks (Server Side)
 
--   Lab \# 6 - Using MFP adapters frameworks (Client side)
+-   Lab \# 6 - Using MFF adapters frameworks (Client side)
 
--   Lab \# 7 - Overview MFP Operational Analytics
+-   Lab \# 7 - Overview MFF Operational Analytics
 
 -   Lab \# 8 - How to capture custom events
 
@@ -48,7 +50,7 @@ The following directories are available once the repository has been cloned :
 
 Once you clone the repo you will notice the following directories :
 
--   **AdapterServices** - This folder contains the MFP adapter project for implementing the back-end integration code.
+-   **AdapterServices** - This folder contains the MFF adapter project for implementing the back-end integration code.
 
 -   **IBMEmployeeApp** - This folder contains the user interface project built using the [Ionic framework](http://ionicframework.com).
 
@@ -60,7 +62,7 @@ Once you clone the repo you will notice the following directories :
 
 This lab requires the following tools :
 
-1.  The **MFP** mfpdev Command Line Interface (CLI) to interact with the MobileFirst Platform, create projects, create adapters, deploy to the mfp server, and view the **MFP** console etc.
+1.  The **MFP** mfpdev Command Line Interface (CLI) to interact with the MobileFirst Platform, create projects, create adapters, deploy to the MFF server, and view the **MFP** console etc.
 
 1.  Choice of IDEs to edit code. Either choose the **Brackets IDE** or the **IntelliJ IDEA** IDE.
 
@@ -74,7 +76,7 @@ This lab requires the following tools :
 
 	<img src=images/Intro-03-brackets-extensions.png width=600>
 
-	The **IntelliJ IDEA** will be used to create a MFP adapter and uset the built-in Maven project features, IntelliJ IDEA is a Java integrated development environment (IDE) for developing computer software. It is developed by JetBrains, and is available as an Apache 2 Licensed community edition. [https://www.jetbrains.com/idea/download/](https://www.jetbrains.com/idea/download/)
+	The **IntelliJ IDEA** will be used to create a MFF adapter and uset the built-in Maven project features, IntelliJ IDEA is a Java integrated development environment (IDE) for developing computer software. It is developed by JetBrains, and is available as an Apache 2 Licensed community edition. [https://www.jetbrains.com/idea/download/](https://www.jetbrains.com/idea/download/)
 
 	<img src=images/Intro-Intellij.png width=600>
 

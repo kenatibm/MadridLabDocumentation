@@ -1,9 +1,9 @@
 - - -
-# Lab 5 - Implement the MFP adapter framework (Server Side)
+# Lab 5 - Implement the MFF adapter framework (Server Side)
 
-If you have looked at the code in app.js in detail, you have noticed that the app is currently using the Employee service and Employee Details controllers.  These services use angular $http services to get the application data, which is stored in .json files locally on the device.  In the next section, you will create MFP adapters to get data from back-end services.  MFP Adapters provide a way to retrieve and manage data for your mobile client app on the server side.
+If you have looked at the code in app.js in detail, you have noticed that the app is currently using the Employee service and Employee Details controllers.  These services use angular $http services to get the application data, which is stored in .json files locally on the device.  In the next section, you will create MFF adapters to get data from back-end services.  MFF Adapters provide a way to retrieve and manage data for your mobile client app on the server side.
 
-The MobileFirst Adapter framework provides support for developing adapters in Java or JavaScript to interface with various back-end architectures such as HTTP, SQL and SAP among others.  The Adapter framework also automatically couples with the MFP security and analytics frameworks, enabling consistent security to back-end resources and ability to record, measure and compare the operational characteristics of the adapter traffic - volumes, servers, response times, etc...
+The MobileFirst Adapter framework provides support for developing adapters in Java or JavaScript to interface with various back-end architectures such as HTTP, SQL and SAP among others.  The Adapter framework also automatically couples with the MFF security and analytics frameworks, enabling consistent security to back-end resources and ability to record, measure and compare the operational characteristics of the adapter traffic - volumes, servers, response times, etc...
 
 For our lab, we will build a Java adapter to interact with a REST API provided by BlueMix service StrongLoop/API Connect (Node.js application) available using the follow url: [http://employeenodeapp.mybluemix.net/](http://employeenodeapp.mybluemix.net/)
 
@@ -15,9 +15,9 @@ Using imagination, the **REST Api** could be an REST APi provided by your organi
 The adapter framework allows you to easily adapt to changes in backend data formats or even completely replace with a different data source, without affecting the client app running on (dozens, hundreds, thousands or millions of) mobile devices.   Changes in your back-end can be addressed in the adapter tier without forcing you to rebuild and redistribute the client app.
 
 
->Note:  For this lab there are snippets files included in the **/snippets** folder of your workspace which can be used to quickly copy/paste the large source code changes in the lab steps below.
+>**Note:**  For this lab there are snippets files included in the **/snippets** folder of your workspace which can be used to quickly copy/paste the large source code changes in the lab steps below.
 
->Note:  Please make sure you have **Apache Maven** installed, and you add it to your path, you can confirm by running **mvn -v** in the terminal 
+>**Note:**  Please make sure you have **Apache Maven** installed, and you add it to your path, you can confirm by running **mvn -v** in the terminal 
 
    <img src="images/Lab5-mvn.png" width="600"/>
 
@@ -25,7 +25,7 @@ The adapter framework allows you to easily adapt to changes in backend data form
 ##Steps
 ### Create the adapter
 
->**Note:**  In previous versions of MFP, you had to create BackEnd project first, before you could create an adapter, Starting v8.0 you don't need to create a back-end project in order to create an adapter.
+>**Note:**  In previous versions of MFF, you had to create BackEnd project first, before you could create an adapter, Starting v8.0 you don't need to create a back-end project in order to create an adapter.
 
 1. Create new folder called AdapterServices in parallel to your IBMEmployeeApp folder
 
@@ -51,24 +51,18 @@ mfpdev adapter create
    
 2. For adapter type select : **`Java`**
 
-	```   
 <img src="images/Lab5-adpt-create.png" width="600"/>
-```   
  
 2. For Java package enter : **`com.ibm`** and press **`Enter`**.  You should get the following success message:
            
 
 4. For group ID enter : **`com.ibm`** and press **`Enter`**.  You should get the following success message:
 
-	```
 <img src="images/Lab5-adpt-success.png" width="600"/>
-```
 
 3. Looking at your file directory you should see the following structure/files
 
-	```
 <img src="images/Lab5-adpt-folder.png" width="350"/>
-```
    
 ### Implement the adapter procedures
 The Java adapter implements the JAX-RS standard, allowing your adapter to also serve as a REST-ful endpoint.  The procedures in the adapter are linked to HTTP verbs such as GET and POST.  The adapter is created with sample procedures, which you can remove.  In the next several steps, you will add code to implement two new methods:
@@ -205,9 +199,9 @@ private final String USER_AGENT = "Mozilla/5.0";
   
   
 ### Test your adapter
-The MFP CLI provides the ability to test adapters using command line commands.  This is not only helpful for manually testing your adapters during development, but it can be leveraged by automated test scripts as part of your DevOps process automation strategy.
+The MFF CLI provides the ability to test adapters using command line commands.  This is not only helpful for manually testing your adapters during development, but it can be leveraged by automated test scripts as part of your DevOps process automation strategy.
 
-1. To test your adapter using the MFP CLI, you must first **build** it and then deploy it to the MFP Development server.
+1. To test your adapter using the MFF CLI, you must first **build** it and then deploy it to the MFF Development server.
    
         mfpdev adapter build
         mfpdev adapter deploy        
@@ -248,9 +242,9 @@ The MFP CLI provides the ability to test adapters using command line commands.  
    <img src="images/Lab5-test-adpt-cmd-3.png" width="600"/>
   
 ## Summary
-In this lab, you added a Java-based MobileFirst adapter to your project.  You then edited the code to implement two procedures that will return a list of employees and employee details via REST interface calls from your mobile client.  You then used the MFP CLI to invoke your adapter procedures manually to confirm they work as expected.
+In this lab, you added a Java-based MobileFirst adapter to your project.  You then edited the code to implement two procedures that will return a list of employees and employee details via REST interface calls from your mobile client.  You then used the MFF CLI to invoke your adapter procedures manually to confirm they work as expected.
 
->Note:  You can also test your adapters by using the built-in Swagger interface available through the console.
+>**Note:**  You can also test your adapters by using the built-in Swagger interface available through the console.
 
 <img src="images/Lab5-swagger.png" width="600"/>
 

@@ -1,26 +1,29 @@
 # MobileFirst Cordova Labs Prerequisites
 
+> **IMPORTANT:** This series of labs assumes you are using a **Mac** with the **macOS operating system**. If you are using Windows or Linux you will need to ensure that you have also installed and properly configured the Anddroid Studio.
+
 Generally speaking it is recommended that you install the latest versions of the software listed. If you have older installations please ensure that you have upgraded to the currently recommended versions.
 
 ## Prerequisites
 To run the labs you will need to have the following tools installed on your laptop computer. You can install natively or create a virtual machine if you desire.
 
-The tools to install include:
+The required tools to install include:
 
 - Install Java
 - Install NodeJS
 - Install Cordova
 - Install Ionic Command-Line-Utility
 - Install Maven
-- Create Bluemix Account
-- Install MobileFirst 8.0 beta Command Line Utility
-- Install MobileFirst 8.0 beta Development Kit
+- Install MobileFirst 8.0 Command Line Utility
+- Install MobileFirst 8.0 Development Kit
 - Install IntelliJ IDEA Community Edition
 - Install Brackets
 
 Optional installs
-- Create an Ionic Creator Account
 
+- Create Bluemix Account
+- Create an Ionic Creator Account
+- Android Studio (for Windows and Linux users)
 
 ## Install Java
 You will need one of the following installed:
@@ -126,12 +129,7 @@ OS name: "mac os x", version: "10.11.4", arch: "x86_64", family: "mac"
 
 > Note that since you have already installed Java, you can skip that portion of the tutorial on mkyong.com.
 
-## Create a Bluemix Account
-Please ensure that you have created a Bluemix account and that you can log into it. If you have not created a Bluemix account please do so using your IBM id at https://console.ng.bluemix.net/registration/
-
-A Bluemix account is required to complete the installation instructions as well as the labs.
-
-## Install MobileFirst 8.0 beta Command Line Utility
+## Install MobileFirst 8.0 Command Line Utility
 
 The development version of the MobileFirst Command Line Utility is now available as an npm install. This version can coexist with previous versions of the MobileFirst Command Line Utility.
 
@@ -145,9 +143,9 @@ You can confirm the installation by typing
 
 You should see something similar to
 
-`8.0.0-201603280000`
+`8.0.0-XXXXXXXXXXXX`
 
-## Install MobileFirst 8.0 beta Development Kit
+## Install MobileFirst 8.0 Development Kit
 IBM MobileFirst Platform Foundation v8.0 beta consists of the following components: MobileFirst Server & MobileFirst Operations Console, MobileFirst Command-line Interface (CLI), MobileFirst client SDKs and MobileFirst adapter tooling.
 
 These components can be installed either seperately via online repositories which contain the latest releases, or downloaded bundled together through the MobileFirst Platform Foundation Development Kit Installer, for future or offline use.
@@ -158,6 +156,11 @@ These components can be installed either seperately via online repositories whic
 For the labs you will need an editor, preferably one that supports Java, Maven, and Git. We have chosen IntelliJ Community Edition because it supports all the features we need to run the labs.
 
 To install IntelliJ, visit https://www.jetbrains.com/idea/download/ and select the operating system you are running (Mac, Windows, or Linux) and download. Run the appropriate installation from the download.
+
+## Create a Bluemix Account
+Please ensure that you have created a Bluemix account and that you can log into it. If you have not created a Bluemix account please do so using your IBM id at https://console.ng.bluemix.net/registration/
+
+A Bluemix account is required to complete the installation instructions as well as the labs.
 
 ## Create an Ionic Creator Account (Optional)
 If you would like to have a tool for visually creating your Ionic User interface, then you may want to create an account at Ionic Creator. To do that visit https://creator.ionic.io/app/signup and signup.

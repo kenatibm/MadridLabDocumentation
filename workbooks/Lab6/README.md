@@ -20,7 +20,7 @@ ibmApp.factory("EmployeeService", function($http){
 	console.log( ">> in EmployeeService ...");
 	var employees = [];
 	var resourceRequest = new WLResourceRequest(
-		"/adapters/EmployeeServices/services/list", WLResourceRequest.GET
+		"/adapters/EmployeeAdapter/services/list", WLResourceRequest.GET
 	);
 	return {
 		getEmployeeList: function(){

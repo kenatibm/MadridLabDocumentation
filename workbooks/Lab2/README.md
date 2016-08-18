@@ -31,10 +31,10 @@ cordova platform add ios
      <img src="images/Lab2-add-plugin.png" />
 
 	>**Note:**  To be able to easily debug your application and view your application console log, run the following command to add the cordova console plugin 
+
+3. **Run** the cordova plugin add cordova-plugin-console
 	
 		 cordova plugin add cordova-plugin-console
-
-4. **Start** the mobile first server, navigate to your mobile first server installation folder and run the following command
 
 	> **Note:** Running the add plugin command above will add all the required MFP plugin files from npm. This requires a network connection. For more information on the MFP Cordova Plugin, visit: [https://www.npmjs.com/package/cordova-plugin-mfp](https://www.npmjs.com/package/cordova-plugin-mfp)
 
