@@ -15,8 +15,9 @@ This lab will use the Cordova CLI to add the MobileFirst Cordova plugin. These a
 
 1. Change context into the MobileFirst project.
 
-        cd IBMEmployeeApp        
-
+	```
+cd IBMEmployeeApp        
+```
 2. **Add** the iOS platform, run the following command cordova platform add ios
 
 	```
@@ -29,7 +30,7 @@ cordova platform add ios
         cordova plugin add cordova-plugin-mfp
      <img src="images/Lab2-add-plugin.png" />
 
-	>Note:  To be able to easily debug your application and view your application console log, run the following command to add the cordova console plugin 
+	>**Note:**  To be able to easily debug your application and view your application console log, run the following command to add the cordova console plugin 
 	
 		 cordova plugin add cordova-plugin-console
 

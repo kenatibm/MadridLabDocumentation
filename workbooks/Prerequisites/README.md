@@ -6,6 +6,7 @@ Generally speaking it is recommended that you install the latest versions of the
 To run the labs you will need to have the following tools installed on your laptop computer. You can install natively or create a virtual machine if you desire.
 
 The tools to install include:
+
 - Install Java
 - Install NodeJS
 - Install Cordova
@@ -15,6 +16,7 @@ The tools to install include:
 - Install MobileFirst 8.0 beta Command Line Utility
 - Install MobileFirst 8.0 beta Development Kit
 - Install IntelliJ IDEA Community Edition
+- Install Brackets
 
 Optional installs
 - Create an Ionic Creator Account

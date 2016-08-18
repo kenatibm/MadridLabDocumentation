@@ -3,7 +3,7 @@
 
 With the MFP adapter in place on the server side, you will now add code to the client app to access the adapter.
 
->Note:  For this lab there are snippets files included in the **/snippets** folder of your workspace which can be used to quickly copy/paste the large source code changes in the lab steps below.
+>**Note:**  For this lab there are snippet files included in the **/snippets** folder of your workspace which can be used to quickly copy/paste the large source code changes in the lab steps below.
 
 ##Steps
 
@@ -15,39 +15,37 @@ The EmployeeService service in app.js returns the list of employees to the contr
 2. Find the **EmployeeService** method.  You will replace the method implementation to use MFP Client API instead of the Angular $http services.
 3. Replace the implementation of the **EmployeeAdapter** method with the code, below (*use the corresponding snippet file in **/snippets** to copy/paste*):
 
-   ``` javascript
-     
-     ibmApp.factory("EmployeeService", function($http){
-        console.log( ">> in EmployeeService ...");
-        var employees = [];
-        var resourceRequest = new WLResourceRequest(
-            "/adapters/EmployeeServices/services/list", WLResourceRequest.GET
-        );
-        return {
-            getEmployeeList: function(){
-                return resourceRequest.send().then(function(response){
-                    employees = response.responseJSON;
-                    return employees;
-                }, function(response){
-                    console.log("error:" + response);
-                    return null;
-                });
-            },
-            getEmployee: function(index){
-                return employees[index];
-            },
-            getEmployeeById: function(id){
-                var _emp;
-                angular.forEach(employees, function(emp) {
-                    console.log(">> getEmployeeById :" + id + " ==  " + emp._id );
-                    if(emp._id == id){ _emp = emp; }
-                });
-                return _emp;
-            }
-        };
-    })
-
-   ```
+```javascript 
+ibmApp.factory("EmployeeService", function($http){
+	console.log( ">> in EmployeeService ...");
+	var employees = [];
+	var resourceRequest = new WLResourceRequest(
+		"/adapters/EmployeeServices/services/list", WLResourceRequest.GET
+	);
+	return {
+		getEmployeeList: function(){
+			return resourceRequest.send().then(function(response){
+				employees = response.responseJSON;
+				return employees;
+			}, function(response){
+				console.log("error:" + response);
+				return null;
+			});
+		},
+		getEmployee: function(index){
+			return employees[index];
+		},
+		getEmployeeById: function(id){
+			var _emp;
+			angular.forEach(employees, function(emp) {
+				console.log(">> getEmployeeById :" + id + " ==  " + emp._id );
+				if(emp._id == id){ _emp = emp; }
+			});
+			return _emp;
+		}
+	};
+})
+```
   
   **Screenshot Before:**  
   
@@ -68,10 +66,10 @@ The EmployeeService service in app.js returns the list of employees to the contr
         cordova prepare 
         cordova emulate
 
-   > Note that trying to test the adapter on the MBS or on the Browser will not work, you will have to use the cordova emulate. 
+   > **Note:** that trying to test the adapter on the MBS or on the Browser will not work, you will have to use the cordova emulate. 
    MBS support will be added at MFP v8.0 GA
    
-   > Note: If you are unable to login, you may need to first re-register the application using `mfpdev app register` then issue a `mfpdev app pull` to get the latest configuration. Then perform the above cordova compands again.
+   > **Note:** If you are unable to login, you may need to first re-register the application using `mfpdev app register` then issue a `mfpdev app pull` to get the latest configuration. Then perform the above cordova compands again.
 
 3. You should see that the Employee List is populated from the data provided by the MobileFirst Platform adapter.  But, if you tap on any employee you will see that the details are still the template values, not those provided by the adapter.  You will correct that next.
 
@@ -89,26 +87,25 @@ EmployeeDetailsService returns details for the specified employee id.  This set 
 
 2. Replace the implementation of the **EmployeeDetailsService** method with the code, below (*use the corresponding snippet file in **/snippets** to copy/paste*):
 
-   ``` javascript
-      
-      ibmApp.factory("EmployeeDetailsService", function($http){
-        console.log( ">> in EmployeeDetailsService ...");
-        return {
-            getEmployeeDetails: function(empId){
-                //using path param.
-                var resourceRequest = new WLResourceRequest(
-                    "/adapters/EmployeeAdapter/services/details/" + empId, WLResourceRequest.GET
-                );
-                return resourceRequest.send().then(function(response){
-                    return response.responseJSON;
-                }, function(response){
-                    console.log("error:" + response);
-                    return null;
-                });
-            }};
-     })
-   
-   ```
+   ```javascript
+ibmApp.factory("EmployeeDetailsService", function($http){
+	console.log( ">> in EmployeeDetailsService ...");
+	return {
+		getEmployeeDetails: function(empId){
+			//using path param.
+			var resourceRequest = new WLResourceRequest(
+				"/adapters/EmployeeAdapter/services/details/" + empId, WLResourceRequest.GET
+			);
+			return resourceRequest.send().then(function(response){
+				return response.responseJSON;
+			}, 
+			function(response){
+				console.log("error:" + response);
+				return null;
+			});
+		}};
+	})   
+```
    
     **Before:**
 

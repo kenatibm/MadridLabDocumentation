@@ -1,15 +1,14 @@
-- - -
 # Lab 8 - How to capture custom events
 
-As has been mentioned earlier, the MobileFirst Platform provides the ability to generate custom log events, which can be used to provide a better understanding of how your users are interacting with an application.  
+As mentioned earlier, the MobileFirst Platform provides the capability to generate custom log events, which can be used to provide a better understanding of how your users are interacting with an application.  
 
-In the following lab, we will explore the logging API and add it to our application in several key places.  The logged events will be collected by the Analytics server, and will be available for inspection and charting to give us very specific insight into usage patterns by our community.
+In the following lab, you will explore the logging API and add it to our application in several key places.  The logged events will be collected by the Analytics server, and will be available for inspection and charting to give us very specific insight into usage patterns by our community.
 
 ### Add WL.Analytics.log() calls to the controller logic in controllers.js
 
 Open the controllers.js file.
 
-With angular / ionic MVC processing, a controller is called each time the view is loaded by user navigation.  In our app we have 3 views - splash, main (or employee), and details, along with 3 controllers - splashCtrl, mainCtrl, and employeeDetailCtrl.  We will add our logging event to each controller, capturing an event each time one of these views is loaded.
+With angular / ionic MVC processing, a controller is called each time the view is loaded by user navigation.  In the app there are 3 views - splash, main (or employee), and details, along with 3 controllers - splashCtrl, mainCtrl, and employeeDetailCtrl.  You will add a logging event to each controller, capturing an event each time one of these views is loaded.
 
 Modify the controller code in controllers.js and add the following code, which will log the **‘viewLoad’** event with the name of the view (login view in this screenshot):
 

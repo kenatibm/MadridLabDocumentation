@@ -33,15 +33,14 @@ The following exercise includes 11 micro labs (\~20 min each)
 
 In order to get the latest code for the ionic application, run the following git command:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-git clone https://github.com/eliranbi/IBMEmployeeApp
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+```
+git clone https://github.com/kenatibm/IBMEmployeeApp.git
+```
 To get the latest documentation, code snippets and adapter code, run the following git
 command:
 
 ```
-git clone https://github.com/eliranbi/MadridLabME13-15.git
+git clone https://github.com/kenatibm/MobileFirst-Foundation-8-Ionic-Lab.git
 ```
 
 The following directories are available once the repository has been cloned :
@@ -92,16 +91,16 @@ Before we can start with preview our existing Ionic Employee Directory applicati
 
 2.  Change context to the IBMEmployeeApp directory:
 
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    cd IBMEmployeeApp
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   ```
+	cd IBMEmployeeApp
+   ```
 
 3.  In order to start from a known point for the first lab run the following
     command:
 
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ```
     git checkout -f step-0
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ```
 
 
 ### Start by previewing the existing Ionic Employee Directory application.

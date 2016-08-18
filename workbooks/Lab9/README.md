@@ -1,4 +1,3 @@
-- - -
 # Lab9 - How to create custom charts
 
 In this lab you will run the instrumented application to generate analytics data, then use the MobileFirst Analytics Console to create custom charts from the captured data, giving deep insight into how your application is being used by the community.
@@ -6,9 +5,11 @@ In this lab you will run the instrumented application to generate analytics data
 ### Preview the application to generate data
 
 Bring up the application using either the emulator or simulator, with
-     
-     cordova prepare
-     cordova emulate 
+
+```     
+cordova prepare
+cordova emulate 
+```
      
 Navigate across the different views within the application - do this a few times.  Finish by choosing **'Logout'** from the hamburger menu on the right.  This will cause the app to forward (flush) all accumulated analytics data to the MFP server.
 

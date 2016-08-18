@@ -25,40 +25,50 @@ The adapter framework allows you to easily adapt to changes in backend data form
 ##Steps
 ### Create the adapter
 
->Note:  In previous versions of MFP, you had to create BackEnd project first, before you could create an adapter, Starting v8.0 you don't need to create a back-end project in order to create an adapter.
+>**Note:**  In previous versions of MFP, you had to create BackEnd project first, before you could create an adapter, Starting v8.0 you don't need to create a back-end project in order to create an adapter.
 
 1. Create new folder called AdapterServices in parallel to your IBMEmployeeApp folder
 
-        cd ..
-        mkdir AdapterServices
+	```
+cd ..
+mkdir AdapterServices
+```
 
 2. Change context to AdapterServices
 
-        cd AdapterServices
+	```
+cd AdapterServices
+```
         
    <img src="images/Lab5-mkdir.png" width="600"/>
 2. **Create** a Java-based adapter to your project
 
-        mfpdev adapter create
+	```
+mfpdev adapter create
+```
 
-   1. When prompted, name your adapter **`EmployeeAdapter`**
+2. When prompted, name your adapter **`EmployeeAdapter`**
    
-   2. For adapter type select : **`Java`**
-   
-        <img src="images/Lab5-adpt-create.png" width="600"/>
-   
-   
-   3. For Java package enter : **`com.ibm`** and press **`Enter`**.  You should get the following success message:
+2. For adapter type select : **`Java`**
+
+	```   
+<img src="images/Lab5-adpt-create.png" width="600"/>
+```   
+ 
+2. For Java package enter : **`com.ibm`** and press **`Enter`**.  You should get the following success message:
            
 
-   4. For group ID enter : **`com.ibm`** and press **`Enter`**.  You should get the following success message:
+4. For group ID enter : **`com.ibm`** and press **`Enter`**.  You should get the following success message:
 
-		<img src="images/Lab5-adpt-success.png" width="600"/>
+	```
+<img src="images/Lab5-adpt-success.png" width="600"/>
+```
 
-	3. Looking at your file directory you should see the following structure/files
+3. Looking at your file directory you should see the following structure/files
 
-	   <img src="images/Lab5-adpt-folder.png" width="350"/>
-
+	```
+<img src="images/Lab5-adpt-folder.png" width="350"/>
+```
    
 ### Implement the adapter procedures
 The Java adapter implements the JAX-RS standard, allowing your adapter to also serve as a REST-ful endpoint.  The procedures in the adapter are linked to HTTP verbs such as GET and POST.  The adapter is created with sample procedures, which you can remove.  In the next several steps, you will add code to implement two new methods:
