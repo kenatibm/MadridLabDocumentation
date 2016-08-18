@@ -72,13 +72,11 @@ We going to implement a challenge handler, The challenge handler will demonstrat
 $scope.isChallenged = false;
 $scope.securityCheckName = 'UserLogin';    
 $scope.userLoginChallengeHandler = null;
-    
 $scope.registerChallengeHandler = function(){        
 	console.log(">> in $scope.registerChllangeHandler ... ");
-	$scope.userLoginChallengeHandler = WL.Client.SecurityCheckChallengeHandler($scope.securityCheckName);    
+	$scope.userLoginChallengeHandler = WL.Client.createSecurityCheckChallengeHandler($scope.securityCheckName);    
 	$scope.userLoginChallengeHandler.securityCheckName = $scope.securityCheckName;    
-	        
-	$scope.userLoginChallengeHandler.handleChallenge = function(challenge) {
+$scope.userLoginChallengeHandler.handleChallenge = function(challenge) {
 		console.log(">> in UserLoginChallengeHandler - userLoginChallengeHandler.handleChallenge ...");
 		//show the login ...                     
 		$scope.user = { username: "", password: ""};            
@@ -98,8 +96,7 @@ $scope.registerChallengeHandler = function(){
 		}
 		console.log(">>> statusMsg : " + statusMsg);
 	};
-	
-	$scope.userLoginChallengeHandler.handleChallenge = function(data){                
+$scope.userLoginChallengeHandler.handleChallenge = function(data){                
 		console.log(">> in UserLoginChallengeHandler - userLoginChallengeHandler.processSuccess ...");        
 		$scope.isChallenged = false;     
 		$timeout(function(){        
@@ -107,7 +104,6 @@ $scope.registerChallengeHandler = function(){
 	}, 200);                    
 	$state.transitionTo("main");                
 };
-	               
 $scope.userLoginChallengeHandler.handleFailure = function(error) {
 	console.log(">> in UserLoginChallengeHandler - userLoginChallengeHandler.handleFailure ...");
 	console.log(">> handleFailure: " + error.failure);
@@ -119,6 +115,7 @@ $scope.userLoginChallengeHandler.handleFailure = function(error) {
 	}
 };
 }
+```
 
 	> **Note:** A **challengeHandler** is responsible for handling challenges sent by the MobileFirst server, such as displaying a login screen, collecting credentials and submitting them back to the security check. we use the **WL.Client.createSecurityCheckChallengeHandler()** API method to create and register a challenge Handler, In order for the challenge handler to listen for the right challenges, you must tell the framework to associate the challenge handler with a specific security check name.
 This is done by creating the challenge handler with the security check like this:
