@@ -13,6 +13,7 @@ The required tools to install include:
 - Install NodeJS
 - Install Cordova
 - Install Ionic Command-Line-Utility
+- install gulp
 - Install Maven
 - Install MobileFirst 8.0 Command Line Utility
 - Install MobileFirst 8.0 Development Kit
@@ -77,6 +78,12 @@ You will need the Ionic Command-Line-Utility to complete the labs. To install th
 	`npm install -g ionic`
 
 1. Confirm the correct version by typing `ionic -v`
+
+## Install Gulp
+
+```
+npm install -g gulp```
+```
 
 ## Install Maven
 The current version of Maven as of 4/11/2016 is 3.3.9. For more information on installing Maven, please visit https://maven.apache.org/install.html
